@@ -1,6 +1,6 @@
 ![Okta Rental](images/oktarental.png)
 
-#####Renting the right car at the right price is almost as important as security.
+##### Renting the right car at the right price is almost as important as security.
 
 The sample code below can be used to provide backend services for the Okta Car Rental Sample application.
 
