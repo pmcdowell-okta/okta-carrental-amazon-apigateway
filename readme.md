@@ -26,7 +26,7 @@ The steps above will pull down the required libraries, and build the code
 If everything works as it should, this would push the required Amazon API Gateway, Custom Authorizer, and supporting Lambda Functions. The output should look something like this:
 
 <code>     
-Serverless: Packaging service...\s
+Serverless: Packaging service...<br />
 Serverless: Excluding development dependencies...   <br/>
 Serverless: Uploading CloudFormation file to S3...   
 Serverless: Uploading artifacts...   
