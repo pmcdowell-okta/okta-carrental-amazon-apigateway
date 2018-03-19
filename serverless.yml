@@ -1,0 +1,53 @@
+service: golang-auth5
+
+provider:
+  name: aws
+  runtime: go1.x
+
+package:
+ exclude:
+   - ./**
+ include:
+   - ./bin/**
+
+functions:
+
+  authorizer:
+    handler: bin/authorizer
+
+  vehicles:
+    handler: bin/vehicles
+    events:
+      - http:
+          path: vehicles
+          method: get
+          authorizer: authorizer
+          cors:
+            origins:
+              - '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+
+  bookings:
+    handler: bin/bookings
+    events:
+      - http:
+          path: bookings
+          method: post
+          authorizer: authorizer
+          cors:
+            origins:
+              - '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+
+
+
