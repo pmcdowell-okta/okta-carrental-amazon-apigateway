@@ -10,7 +10,7 @@ The Serverless framework is not required, But it makes the deployment **Much** e
 
 If you wish to recompile or change the code, it is written in **GO**, so you will neeed to set that up, however the binaries required to deploy this are included, so it *should* run out-of-box
 
-####Deployment Instructions
+#### Deployment Instructions
 
 * Clone the repository like this     
 `git clone https://github.com/pmcdowell-okta/okta-carrental-amazon-apigateway.git`
