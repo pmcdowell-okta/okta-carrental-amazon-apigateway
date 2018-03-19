@@ -25,32 +25,7 @@ The steps above will pull down the required libraries, and build the code
 
 If everything works as it should, this would push the required Amazon API Gateway, Custom Authorizer, and supporting Lambda Functions. The output should look something like this:
 
-<code>     
-Serverless: Packaging service...<br />
-Serverless: Excluding development dependencies...   <br/>
-Serverless: Uploading CloudFormation file to S3...   
-Serverless: Uploading artifacts...   
-Serverless: Uploading service .zip file to S3 (9.06 MB)...   
-Serverless: Validating template...   
-Serverless: Updating Stack...   
-Serverless: Checking Stack update progress...   
-..........................   
-Serverless: Stack update finished...   
-Service Information   
-service: golang-auth5   
-stage: dev   
-region: us-east-1   
-stack: golang-auth5-dev   
-api keys:   
-  None   
-endpoints:   
-  GET - https://pn5vw8stw7.execute-api.us-east-1.amazonaws.com/dev/vehicles   
-  POST - https://pn5vw8stw7.execute-api.us-east-1.amazonaws.com/dev/bookings   
-functions:   
-  authorizer: golang-auth5-dev-authorizer   
-  vehicles: golang-auth5-dev-vehicles   
-  bookings: golang-auth5-dev-bookings   
-</code>
+![Serverless](images/serverless.png)
 
 
 
