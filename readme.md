@@ -12,44 +12,44 @@ If you wish to recompile or change the code, it is written in **GO**, so you wil
 
 ####Deployment Instructions
 
-* Clone the repository like this <br/> 
+* Clone the repository like this     
 `git clone https://github.com/pmcdowell-okta/okta-carrental-amazon-apigateway.git`
 
-* If you have GO Language installed, you can compile the code like this, if you are not compiling the code, you can **Skip** this step, don't sweat it <br/>
+* If you have GO Language installed, you can compile the code like this, if you are not compiling the code, you can **Skip** this step, don't sweat it    
 `make setup`   
-`make build`<br/>
+`make build`   
 The steps above will pull down the required libraries, and build the code
 
-* Deploy the code using Serverless Framework <br/>
+* Deploy the code using Serverless Framework    
 `sls deploy`
 
 If everything works as it should, this would push the required Amazon API Gateway, Custom Authorizer, and supporting Lambda Functions. The output should look something like this:
 
-<code><br/>
-Serverless: Packaging service...<br/>
-Serverless: Excluding development dependencies...<br/>
-Serverless: Uploading CloudFormation file to S3...<br/>
-Serverless: Uploading artifacts...<br/>
-Serverless: Uploading service .zip file to S3 (9.06 MB)...<br/>
-Serverless: Validating template...<br/>
-Serverless: Updating Stack...<br/>
-Serverless: Checking Stack update progress...<br/>
-..........................<br/>
-Serverless: Stack update finished...<br/>
-Service Information<br/>
-service: golang-auth5<br/>
-stage: dev<br/>
-region: us-east-1<br/>
-stack: golang-auth5-dev<br/>
-api keys:<br/>
-  None<br/>
-endpoints:<br/>
-  GET - https://pn5vw8stw7.execute-api.us-east-1.amazonaws.com/dev/vehicles<br/>
-  POST - https://pn5vw8stw7.execute-api.us-east-1.amazonaws.com/dev/bookings<br/>
-functions:<br/>
-  authorizer: golang-auth5-dev-authorizer<br/>
-  vehicles: golang-auth5-dev-vehicles<br/>
-  bookings: golang-auth5-dev-bookings<br/>
+<code>     
+Serverless: Packaging service...     
+Serverless: Excluding development dependencies...   
+Serverless: Uploading CloudFormation file to S3...   
+Serverless: Uploading artifacts...   
+Serverless: Uploading service .zip file to S3 (9.06 MB)...   
+Serverless: Validating template...   
+Serverless: Updating Stack...   
+Serverless: Checking Stack update progress...   
+..........................   
+Serverless: Stack update finished...   
+Service Information   
+service: golang-auth5   
+stage: dev   
+region: us-east-1   
+stack: golang-auth5-dev   
+api keys:   
+  None   
+endpoints:   
+  GET - https://pn5vw8stw7.execute-api.us-east-1.amazonaws.com/dev/vehicles   
+  POST - https://pn5vw8stw7.execute-api.us-east-1.amazonaws.com/dev/bookings   
+functions:   
+  authorizer: golang-auth5-dev-authorizer   
+  vehicles: golang-auth5-dev-vehicles   
+  bookings: golang-auth5-dev-bookings   
 </code>
 
 
