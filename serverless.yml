@@ -1,4 +1,4 @@
-service: golang-auth5
+service: Authorizer3
 
 provider:
   name: aws
@@ -33,21 +33,22 @@ functions:
               - X-Amz-Security-Token
 
   bookings:
-    handler: bin/bookings
-    events:
-      - http:
-          path: bookings
-          method: post
-          authorizer: authorizer
-          cors:
-            origins:
-              - '*'
-            headers:
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
+     handler: bin/bookings
+     events:
+       - http:
+           path: bookings
+           method: post
+           authorizer: authorizer
+           cors:
+             origins:
+               - '*'
+             headers:
+               - Content-Type
+               - X-Amz-Date
+               - Authorization
+               - X-Api-Key
+               - X-Amz-Security-Token
+
 
 
 
